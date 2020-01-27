@@ -8,6 +8,7 @@
     auth_basic_user_file                  /etc/nginx/.htpasswd;
 
     location /execute {
+       proxy_buffering off;
        proxy_pass http://splash:8050;
     }
 
